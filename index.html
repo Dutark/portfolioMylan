@@ -101,13 +101,12 @@
               <div class="col-lg-6">
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Anniversaire :</strong> <span>18 Juin 2003</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Téléphone :</strong> <span>06 23 05 31 60</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Ville :</strong> <span>L'Herbergement, France</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>19</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>19</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Diplôme :</strong> <span>BTS SIO option SLAM</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Mail :</strong> <span>mylan2003@hotmail.fr</span></li>
                 </ul>
@@ -140,7 +139,6 @@
               <p><em></em></p>
               <ul>
                 <li>3 rue des Aigrettes, 85260, L'Herbergement</li>
-                <li>0623053160</li>
                 <li>mylan2003@hotmail.fr</li>
               </ul>
             </div>
@@ -220,7 +218,7 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
               <h5 class="card-title">Uber Bar</h5>
               <p class="card-text">*<!--Ce projet a été réalisé à 2, il est composé d'une application Web pour gérer des hackathons ainsi que les équipes qui y participe.
                                      Il est composé d'une application lourde permettant au chef d'équipe et aux organisateurs de gérer leur équipe et hackathon.!--></p>
@@ -287,25 +285,31 @@
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="bi bi-briefcase"></i></div>
             <h4 class="title"><a href="">Front-End</a></h4>
-            <p class="description">- PHP 8</p>
-            <p class="description">- C#</p>
-            <p class="description">- SQL</p>
+            <div class="competencesDescription">
+            <p class="description">PHP 8</p>
+            <p class="description">C#</p>
+            <p class="description">SQL</p>
+            </div>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bi bi-card-checklist"></i></div>
             <h4 class="title"><a href="">Back End</a></h4>
-            <p class="description">- HTML5</p>
-            <p class="description">- CSS3</p>
-            <p class="description">- JavaScript</p>
-            <p class="description">- Laravel Blade</p>
+            <div class="competencesDescription">
+            <p class="description">HTML5</p>
+            <p class="description">CSS3</p>
+            <p class="description">JavaScript</p>
+            <p class="description">Laravel Blade</p>
+            </div>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="bi bi-bar-chart"></i></div>
             <h4 class="title"><a href="">Framework</a></h4>
-            <p class="description">- Laravel</p>
-            <p class="description">- VueJS</p>
-            <p class="description">- Bootstrap</p>
-            <p class="description">- Tailwind</p>
+            <div class="competencesDescription">
+              <p class="description">Laravel</p>
+              <p class="description">VueJS</p>
+              <p class="description">Bootstrap</p>
+              <p class="description">Tailwind</p>
+            </div>
           </div>
         </div>
 
@@ -322,31 +326,25 @@
         </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+            <form name="contact" method="POST" data-netlify="true">
+              <p>
+                <label>Your Name: <input type="text" name="name" /></label>
+              </p>
+              <p>
+                <label>Your Email: <input type="email" name="email" /></label>
+              </p>
+              <p>
+                <label>Your Role: <select name="role[]" multiple>
+                  <option value="leader">Leader</option>
+                  <option value="follower">Follower</option>
+                </select></label>
+              </p>
+              <p>
+                <label>Message: <textarea name="message"></textarea></label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
             </form>
           </div>
 
